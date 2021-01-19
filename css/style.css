@@ -1,0 +1,390 @@
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 16px;
+    margin: 0;
+    color: #fff;
+    font-family: 'Dosis', Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+main {
+    display: block;
+    padding: 30px 0;
+}
+* {
+    outline: none !important;
+}
+h1, h2, h3, h4, h5, h6, p, a, input, div, textarea, label {
+    margin: 0;
+}
+h2 {
+    font-size: 28px;
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+p {
+    font-size: 1em;
+}
+img {
+    border-style: none;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+header {
+    background-color: black;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: left;
+    border-bottom: 1px solid white;
+}
+header img {
+    vertical-align: middle;
+}
+header .logo {
+    float: left;
+    margin-right: 20px;
+}
+.title-header {
+    float: left;
+}
+.title-header .title {
+    display: inline-block;
+    color: #fff;
+    font-size: 26px;
+    font-family: 'Dosis', serif;
+    margin-top: 10px;
+}
+nav {
+    font-size: 18px;
+    text-align: center;
+    float: right;
+    margin-top: 5px;
+}
+nav li {
+    display: inline-block;
+}
+nav li a {
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    transition: background-color .2s;
+}
+nav li a:hover {
+    text-decoration: underline;
+}
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/espresso-machine-690498_1280.jpg);
+    /* https://pixabay.com/photos/espresso-machine-coffee-cafe-690498/ */
+    background-size: cover;
+    color: white;
+    height: 50vw;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+.hero h1 {
+    font-family: 'Dancing Script', sans-serif;
+    font-weight: 300;
+    font-size: 8vw;
+    padding-top: 20vw;
+}
+.hero h2 {
+    font-family: 'Oleo Script', sans-serif;
+    font-weight: 700;
+    font-size: 4vw;
+    padding-top: 1vw;
+}
+.item-inner {
+    margin-left: 10px;
+}
+.column {
+    width: 30%;
+    display: inline-block;
+    margin-top: 20px;
+}
+.column:not(:last-child) {
+    margin-right: 2%;
+}
+.hours {
+    border: 1px solid darkgrey;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    color: white;
+    text-transform: uppercase
+}
+.hours span {
+    float: right;
+    color: #ddd;
+    text-transform: lowercase;
+    font-weight: 500;
+}
+.hours li {
+    border-bottom: 1px dotted #555;
+}
+.menu-item {
+    margin-bottom: 30px;
+}
+.menu-item h2 {
+    margin-bottom: 10px;
+}
+.menu-item:first-child {
+    float: left;
+    margin-left: 2.5%;
+}
+.menu-item:nth-child(2) {
+    float: left;
+    margin-right: 2.5%;
+}
+.menu-item li {
+    padding-bottom: 3px;
+    border-bottom: 1px dotted #555;
+    margin-bottom: 5px;
+}
+.menu-item li span {
+    float: right;
+}
+.menu-item .muted {
+    color: #bbb;
+}
+.event-item {
+    margin-bottom: 25px;
+    border: 1px solid #000
+}
+footer {
+    color: #fff;
+    padding: 10px;
+    border-top: 1px solid white;
+    text-align: center;
+}
+footer h2 {
+    margin-bottom: 10px;
+}
+footer li {
+    display: inline-block;
+    margin: 5px 0;
+}
+footer a {
+    color: #ddd;
+    font-weight: bold;
+    text-decoration: none;
+}
+footer a:hover, footer a:active {
+    color: #fff;
+    text-decoration: underline;
+}
+footer li {
+    display: inline-block;
+    width: 32%;
+}
+footer li:first-child {
+    text-align: left;
+}
+footer li:nth-child(2) {
+    text-align: center;
+}
+footer li:last-child {
+    text-align: right;
+}
+/* ---------------- DESKTOP ONLY ------------------ */
+
+@media(min-width: 841px) {
+    body {
+        margin-top: 40px;
+    }
+    #menu, .overlay, .menuButton, #closeButton {
+        display: none;
+    }
+}
+/* ----------------- TABLET ONLY -------------------- */
+
+@media (min-width: 640px) and (max-width: 840px) {
+    .column:not(:last-child) {
+        width: 45%;
+        border-width: 0;
+        padding: 0 15px;
+        margin: 20px 0px;
+    }
+    .column:first-child {
+        margin-right: 5%;
+    }
+    .column:last-child {
+        width: 100%;
+    }
+}
+/* --------------- MOBILE & TABLET ------------------ */
+
+@media (max-width: 840px) {
+    body {
+        min-width: 300px;
+        margin-top: 30px;
+    }
+    header {
+        min-width: 300px;
+    }
+    header img {
+        display: none;
+    }
+    header .container {
+        padding: 0;
+    }
+    .title-header {
+        margin: -5px auto 0;
+        text-align: center;
+    }
+    .title-header .title {
+        font-size: 24px;
+    }
+    .column:first-child {
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/coffee-beans.jpg);
+        /* https://pixabay.com/photos/coffee-beans-food-texture-pattern-926837/ */
+        background-attachment: fixed;
+    }
+    .column:first-child li {
+        border-color: #888;
+    }
+    #menu {
+        clip: rect(0, 0, 0, 0);
+        position: fixed;
+    }
+    nav {
+        height: 0px;
+        width: 100%;
+        transition: height .5s;
+        border-width: 0px;
+        text-align: center;
+        overflow: hidden;
+    }
+    nav .container {
+        padding: 0;
+    }
+    nav li a {
+        transition: background-color .3s, color .3s;
+    }
+    nav li a:active, nav li a:hover {
+        background-color: #fff;
+        color: black;
+        text-decoration: none;
+    }
+    nav li a {
+        display: block;
+        padding: 15px;
+    }
+    .menuButton {
+        float: right;
+        margin: 4px 5px 0 0;
+    }
+    .menuButton span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+    }
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    input#menu:checked~header nav {
+        height: 200px;
+    }
+    input#menu:checked~.overlay {
+        display: block;
+    }
+    nav li {
+        display: block;
+        width: 100%;
+    }
+    nav li:not(:last-of-type) {
+        border-bottom: 1px solid white;
+    }
+    footer li {
+        width: 100%;
+    }
+    footer li:nth-child(odd), footer li:nth-child(even) {
+        float: none;
+        clear: none;
+        display: block;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+}
+/* ----------------- MOBILE ONLY -------------------- */
+
+@media (max-width: 640px) {
+    .column {
+        width: 100%;
+        /*float: none;*/
+        margin: 20px 0 30px !important;
+    }
+    .column:not(:last-child) {
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+@media (max-width: 300px){
+    .hero{
+        height: 150px;
+    }
+    .hero h1{
+        padding-top: 58px;
+        font-size: 24px;
+    }
+    .hero h2{
+        padding-top: 5px;
+        font-size: 12px;
+    }
+}
+#coffeehouse {
+    clear: both;
+    background-image: url("https://live.staticflickr.com/4547/38870108602_4d4a96ca01_b.jpg");
+    /* https://www.flickr.com/photos/23766603@N07/38870108602 */
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    animation-name: background-pan;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes background-pan {
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
+}
